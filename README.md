@@ -15,10 +15,12 @@ tables ,individually or in relation to one another
 
 **Read exammples and corresponding input syntax below**
 
-**Get all post**= (GET) http://localhost/Api_blog/api_front_end/post/read.php 
-**Get specific post**=(GET) http://localhost/Api_blog/api_front_end/post/read_single.php?id=id_of_post_to_get
-**insert post**= (POST) http://localhost/Api_blog/api_front_end/post/create.php
+**Get all post**= (GET) http://localhost/Api_blog/api_front_end/post/read.php <br>
+**Get specific post**=(GET) http://localhost/Api_blog/api_front_end/post/read_single.php?id=id_of_post_to_get<br>
+**insert post**= (POST) http://localhost/Api_blog/api_front_end/post/create.php<br>
+
                 syntax for body parameter
+                <pre>
                 {
                          "category_id":"2",
                           "id":"21",
@@ -28,17 +30,30 @@ tables ,individually or in relation to one another
 
 
                       }
+                 </pre>
                       
                    Headers has a key of content-type and value is application/json
+                   
+                   <br>
                   
 **Delete a post**= (DELETE) http://localhost/Api_blog/api_front_end/post/delete.php
+<br>
+
+
                          syntax for body parameter,requires an id,
+                         <pre>
                 {
                         
                           "id":"21",
-            }
- **Update a post**=(PATCH) http://localhost/Api_blog/api_front_end/post/update.php
+                 }
+                 </pre>
+                 
+  <br>               
+ **Update a post**=(PATCH) http://localhost/Api_blog/api_front_end/post/update.php<br>
+ 
+ 
   syntax for body parameter,requires the whole body ,then we can update however we want,
+  <pre>
                                    {
             "id": "22",
              "title": "test",
@@ -48,6 +63,7 @@ tables ,individually or in relation to one another
             "category_name": "Gaming"
            
         }
+</pre>
 
 **NOTE**
 Basic knowledge of how to use the post man API would help you navigate the calls 
